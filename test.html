@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Slip</title>
+
+//Using https://getmdl.io, Material Design Lite
+    
+    //fevicon
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    
+	//loading material design lite css and js
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    
+</head>
+
+
+<body>
+
+    <div align="center">
+        <img border='0' src='logo.jpg' height="227" width="200" />
+        <h2 class="mdl-color-text--red-700">UP Police Salary Slip</h2>
+
+    </div>
+
+
+    <form action="http://45.64.159.163/uppolice/employee/pay_slip.php" name="comform" id="comform" method="post" onSubmit="return frmValidation(document.comform)">
+
+
+
+
+
+        <table border="" align="center" class="mdl-data-table mdl-js-data-table">
+
+
+            <tr>
+                <td>
+                    <strong>Personal Number: </strong>
+
+                </td>
+
+                <td class="mdl-textfield mdl-js-textfield">
+                   
+                    <input type="text" name="txtpno" id="txtpno" maxlength="9" pattern="-?[0-9]*(\.[0-9]+)?" class="mdl-textfield__input" />
+                   
+
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                    
+                </td>
+
+            </tr>
+
+
+
+            <tr>
+                <td width="" align="right"><strong>Enter Months &nbsp;:</strong>
+                </td>
+
+
+                <td width="" class="mdl-textfield mdl-js-textfield">
+                    <input type="text" name="txtmnth" id="txtmnth" maxlength="2" pattern="-?[0-9]*(\.[0-9]+)?" class="mdl-textfield__input" />
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td align="right"><strong>Enter Year &nbsp;&nbsp;:</strong>
+
+                </td>
+                <td class="mdl-textfield mdl-js-textfield">
+                    <input type="text" name="txtyr" id="txtyr" maxlength="4" pattern="-?[0-9]*(\.[0-9]+)?" class="mdl-textfield__input" />
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td colspan="2">
+                    <input class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" name="sbmt" value="Show Salary Slip" /></td>
+
+            </tr>
+
+       
+        </table>
+        
+    </form>
+        
+        
+    </br>
+    </br>
+       <div align="center">
+       
+           <h6>For Auto Fill Click Here:</h6>
+           
+             </br>
+        <button onclick="year()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"> Current Year
+ 
+         </button>
+          <button onclick="month()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"> Currenty Month</button> 
+            </div>
+            </br>
+    
+	//for filling the month and year automatically
+    <script>
+    function year() {
+        
+        document.comform.txtyr.value='2017';
+        return true;
+    }
+        
+        
+        function month(){
+        
+        var d = new Date();
+        var n = d.getMonth();
+        n=n+1;
+        
+        var l=n;
+        
+         if(l<10){
+             l= "0"+n;
+             document.comform.txtmnth.value=l;
+         }
+      else{  
+     document.comform.txtmnth.value=n;
+        return true;
+      }
+        
+    }
+        
+    
+           
+        
+    </script>
+    
+   <div class="mdl-color--red-700" width="500" height>
+       
+     <marquee hspace="5"> <h6 class="mdl-color-text--white"> This is not an official website or associated with any official website of UP Police 
+      click here: <a href="https://uppolice.gov.in/" rel="nofollow" class="mdl-color-text--white"> OFFICIAL WEBSITE</a>
+      </h6> 
+       </marquee>
+   </div>
+    
+</body>
+
+</html>
+
+//javascript for validating the data
+
+<script language="javascript" type="text/javascript">
+    function frmValidation(myForm) {
+        if (myForm.txtpno.value == "") {
+            alert("Please Fill Personal Number");
+            myForm.txtpno.focus();
+            return false;
+        } else if (myForm.txtmnth.value == "") {
+            alert("Please Fill Month");
+            myForm.txtmnth.focus();
+            return false;
+        } else if (myForm.txtmnth.value > 12) {
+            alert("Please fill correct month");
+            myForm.txtmnth.focus();
+            return false;
+        } else if (myForm.txtyr.value == "") {
+            alert("Please fill year");
+            myForm.txtyr.focus();
+            return false;
+        } else if (myForm.txtyr.value.length != 4) {
+            alert("Please fill 4 digit of year");
+            myForm.txtyr.focus();
+            return false;
+        } else return true;
+    }
+</script>
