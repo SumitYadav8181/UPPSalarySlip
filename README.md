@@ -2,7 +2,7 @@
 
 <h2>"Make things that are valuable for others"</h2>
 
-Retouched Version: https://github.com/SumitYadav8181/UPPSalarySlip
+Retouched Version: https://sumityadav8181.github.io/UPPSalarySlip/
 
 Here is how official one looks: https://45.64.159.163/uppolice/employee/sal_idx.php
 
