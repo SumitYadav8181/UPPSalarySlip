@@ -111,7 +111,9 @@
     <script>
     function year() {
         
-        document.comform.txtyr.value='2017';
+        var y= new Date();
+        var k=y.getFullYear();
+        document.comform.txtyr.value=k;
         return true;
     }
         
