@@ -1,7 +1,7 @@
 <h1 align="center"> Uttar Pradesh Police Salary Slip </h1>
 
 <a href='https://play.google.com/store/apps/details?id=upp.salaryslip.sky&utm_source=github&utm_campaign=socialsharing&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_gb/badges/images/generic/en_badge_web_generic.png'/></a>
-## 800+ Downloads
+## 1.6K+ Downloads
 
 <h2>"Make things that are valuable for others"</h2>
 
